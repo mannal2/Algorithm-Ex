@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//용량이 큰 변수 사용시 전역변수 사용
 int v[1000001] = {};
 vector<int> v2;
 
@@ -13,8 +13,8 @@ int main() {
 
 	for (int i = 0; i < n; i++) {
 		cin >> a;
-		v[a] = 1;
-		v2.push_back(a);
+		v[a] = 1; //각 숫자를 인덱스로 하는 배열칸을 1로 설정
+		v2.push_back(a); //입력된 숫자들의 배열
 	}
 	cin >> x;
 	for (int f : v2) {
@@ -24,7 +24,7 @@ int main() {
 	cout << cnt/2;
 }
 
-/*
+/* //벡터를 사용하지 않는 알고리즘
 #include <bits/stdc++.h>
 using namespace std;
 
